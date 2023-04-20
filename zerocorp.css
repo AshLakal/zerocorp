@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    height: 200vh;
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: radial-gradient(circle, rgb(212, 206, 221) 0%, rgb(78, 65, 139) 30%, rgb(45, 32, 104) 50%, rgb(19, 3, 39) 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.moon {
+    position: fixed;
+    width: 75vw; 
+    height: 75vw;
+    max-width: 75vh;
+    max-height: 75vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 228, 196, 0.8) 0%, rgba(255, 228, 196, 0.6) 25%, rgba(255, 228, 196, 0.4) 50%, rgba(255, 228, 196, 0.2) 75%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 50%; /* Make the div circular */
+}
+
+/* Add this to your existing CSS file */
+#buisson1,
+#buisson2 {
+    position: absolute;
+    bottom: 98vh;
+    width: 50%; /* Adjust the width as needed */
+    z-index: 10; /* Higher z-index to position the bushes above other elements */
+}
+
+#buisson1 {
+    left: -20%; /* Position bush 1 */
+    }
+
+#buisson2 {
+    right: -25%; /* Position bush 2 */
+}
+
+
+
+#newLayer {
+    z-index: 2;
+    left: 5%;
+    bottom:-2%;
+}
+
+.zerocorp {
+    position: fixed;
+    width: 65vw; 
+    height: 65vw; 
+    max-width: 65vh; 
+    max-height: 65vh; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.cave {
+    position: fixed;
+    z-index: 4;
+    bottom: -110%; /* 90% from the top */
+    width: 100%;
+    height: 120vh;
+}
+  
+.building {
+    position: fixed;
+    bottom: 5%;
+}
+
+#immeubleC {
+    left: 20%;
+    z-index: 2;
+}
+
+#immeubleD {
+    right: 20%;
+    z-index: 2;
+}
+
+#immeubleA {
+    left: 30%;
+    z-index: 3;
+}
+
+#immeubleB {
+    right: 12%;
+    z-index: 3;
+}
+
+.cables {
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: 5;
+}
+
+.ordi {
+    position: fixed;
+    bottom: 7vh;
+    left: 0;
+    z-index: 8; /* Ensure the image appears above other elements */
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+#youtube-button {
+    position: fixed;
+    top: 65vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#youtube-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+#youtube-button img {
+    width: 80%; /* Adjust this value according to your desired button size */
+    height: auto;
+}
+
+
+.contact-link {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    font-family: Verdana;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    z-index: 6;
+}
+
+.contact-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.floating-title {
+    position: fixed;
+    right: 15%;
+    top:8%;
+    font-size: 3rem;
+    z-index: 3;
+    opacity: 1;
+    font-family: Verdana; /* Choisissez votre police préférée */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.zerocorp,
+#newLayer,
+#immeubleA,
+#immeubleC,
+#immeubleB,
+#immeubleD,
+.floating-title,
+.cave,
+.cables {
+    will-change: transform, opacity, left, right, bottom;
+}
+
+.custom-element {
+    position: fixed;
+    width: 15%;
+    z-index: 4;
+    bottom: 8%;
+    left: 50%;
+    transform-origin: right center; /* Ajoutez cette ligne pour déplacer le point de transformation */
+    transform: translateX(-50%);
+    will-change: transform, top;
+}
+
+@media (max-width: 767px) {
+
+    #cave {
+        background-image: url('cave-mobile.png');
+    }
+
+    .cables {
+        width: 50%;
+        height: 30%;
+    }
+
+    #youtube-popup {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        padding-bottom: 56.25%;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        background-color: #666666;
+        padding: 10px;
+      }
+
+      #youtube-video {
+        width: 100%;
+        height: auto;
+        padding-bottom: 56.25%;
+      }
+
+    #immeubleA, #immeubleB, #immeubleC, #immeubleD, #newLayer {
+        width: 30%;
+        bottom: 7%;
+    }
+
+    #immeubleC {
+        height: 50%;
+        width: 50%;
+        left: 16%;
+    }
+    #immeubleA {
+        left:23%;
+    }
+
+    #immeubleD {
+        right:18%;
+    } 
+
+    #immeubleB {
+        right: 10%;
+    }
+
+    #newLayer {
+        width: 100%;
+        right: 5%;
+    }
+
+    #buisson1,
+#buisson2 {
+    position: absolute;
+    bottom: 105vh;
+    height: 20%;
+    width: 50%; /* Adjust the width as needed */
+    z-index: 10; /* Higher z-index to position the bushes above other elements */
+}
+
+#buisson1 {
+    left: -20%; /* Position bush 1 */
+    }
+
+#buisson2 {
+    right: -25%; /* Position bush 2 */
+}
+}
+
