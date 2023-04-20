@@ -1,40 +1,3 @@
-function animateBushes() {
-    const buisson1 = document.querySelector('#buisson1');
-    const buisson2 = document.querySelector('#buisson2');
-
-    const buisson1Animation = buisson1.animate(
-        [
-            { left: '10%' },
-            { left: '-20%' },
-        ],
-        { duration: 1000, easing: 'ease-out' }
-    );
-
-    const buisson2Animation = buisson2.animate(
-        [
-            { right: '10%' },
-            { right: '-25%' },
-        ],
-        { duration: 1000, easing: 'ease-out' }
-    );
-
-    return Promise.all([buisson1Animation.finished, buisson2Animation.finished]);
-}
-
-
-function smoothScroll(event) {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href");
-    window.scrollTo({
-        top: document.querySelector(targetId).offsetTop,
-        behavior: "smooth"
-    });
-}
-
-// Add event listeners for smooth scrolling
-document.querySelectorAll("nav a").forEach((anchor) => {
-    anchor.addEventListener("click", smoothScroll);
-});
 
 function animateMobileElements() {
 
@@ -171,9 +134,7 @@ function animateElements() {
 
     document.addEventListener('DOMContentLoaded', async () => {
         window.scrollTo(0, 0);
-    
-        animateBushes();
-    
+     
         if (window.innerWidth <= 767) {
             animateMobileElements();
         } else {
@@ -182,11 +143,6 @@ function animateElements() {
     });
     
 
-    document.addEventListener('touchmove', (e) => {
-        if (window.pageYOffset <= 0 && e.touches[0].clientY < e.touches[0].pageY) {
-            e.preventDefault();
-        }
-    }, { passive: false });
 
 function updateAnimation() {
     const scrollPos = window.pageYOffset;
@@ -211,7 +167,7 @@ function updateAnimation() {
         document.querySelector('#immeubleD').style.right = `${18 - scrollPercent * 6.33}%`;
         document.querySelector('#newLayer').style.bottom = `${7 - scrollPercent * -1}%`;
         document.querySelector('.cables').style.right = `-${70 - scrollPercent * 50}%`;
-        document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -90}%`;   
+        document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -110}%`;   
     } else {  
     document.querySelector('.zerocorp').style.opacity = 0.15 + scrollPercent * 0.55;
     document.querySelector('#immeubleA').style.left = `${30 - scrollPercent * 20}%`;
@@ -220,7 +176,7 @@ function updateAnimation() {
     document.querySelector('#immeubleD').style.right = `${20 - scrollPercent * 15}%`;
     document.querySelector('#newLayer').style.bottom = `${-2 - scrollPercent * 5}%`;
     document.querySelector('.cables').style.right = `-${70 - scrollPercent * 50}%`;
-    document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -90}%`;
+    document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -110}%`;
     }
     if (window.innerWidth <= 767) {
     document.querySelector('#immeubleA').style.bottom = `${7 - scrollPercent * -40}%`;
@@ -237,12 +193,14 @@ function updateAnimation() {
 document.addEventListener('scroll', updateAnimation);
   
 
+let animationPlayed = false;
+
 window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+    if (!animationPlayed && window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+        animationPlayed = true;
         setTimeout(() => {
-            youtubeButton.classList.remove("hidden");
             animateOrdi();
-        }, 2000);
+        }, 500);
     }
 });
 
