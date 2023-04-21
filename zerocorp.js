@@ -1,12 +1,39 @@
+// Disable browser's default scroll restoration behavior
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Function to disable scrolling
+function disableScroll() {
+    document.body.classList.add('no-scroll');
+}
+
+// Function to enable scrolling
+function enableScroll() {
+    document.body.classList.remove('no-scroll');
+}
+
+// Function to reset scroll position and retrigger animation
+function resetScrollAndAnimation() {
+    // Reset scroll position to the top
+    window.scrollTo(0, 0);
+
+    // Disable scrolling and retrigger animation
+    disableScroll();
+
+    // Enable scrolling after the animation ends
+    setTimeout(function () {
+        enableScroll();
+    }, 1000); // Replace 5000 with the duration of your starting animation in milliseconds
+}
+
+// Reset scroll position and retrigger animation on page load
+resetScrollAndAnimation();
+
 
 function animateMobileElements() {
 
     const animations = [
-        {
-            element: document.querySelector('#newLayer'),
-            keyframes: [{ bottom: '8%' }, { bottom: '7%' }],
-            options: { duration: 1000, easing: 'ease-out' }
-        },
         {
             element: document.querySelector('.zerocorp'),
             keyframes: [{ opacity: 0 }, { opacity: 0.15 }],
@@ -19,7 +46,7 @@ function animateMobileElements() {
         },
         {
             element: document.querySelector('#immeubleC'),
-            keyframes: [{ left: '19%' }, { left: '16%' }],
+            keyframes: [{ left: '10%' }, { left: '7%' }],
             options: { duration: 1000, easing: 'ease-out' }
         },
         {
@@ -81,12 +108,12 @@ function animateElements() {
         },
         {
             element: document.querySelector('#immeubleA'),
-            keyframes: [{ left: '33%' }, { left: '30%' }],
+            keyframes: [{ left: '21%' }, { left: '18%' }],
             options: { duration: 1000, easing: 'ease-out' }
         },
         {
             element: document.querySelector('#immeubleC'),
-            keyframes: [{ left: '22%' }, { left: '20%' }],
+            keyframes: [{ left: '32%' }, { left: '30%' }],
             options: { duration: 1000, easing: 'ease-out' }
         },
         {
@@ -162,16 +189,16 @@ function updateAnimation() {
     if (window.innerWidth <= 767) {
         document.querySelector('.zerocorp').style.opacity = 0.15 + scrollPercent * 0.55;
         document.querySelector('#immeubleA').style.left = `${23 - scrollPercent * 8}%`;
-        document.querySelector('#immeubleC').style.left = `${16 - scrollPercent * 3.4}%`;
+        document.querySelector('#immeubleC').style.left = `${7 - scrollPercent * 3.4}%`;
         document.querySelector('#immeubleB').style.right = `${10 - scrollPercent * 11.66}%`;
         document.querySelector('#immeubleD').style.right = `${18 - scrollPercent * 6.33}%`;
-        document.querySelector('#newLayer').style.bottom = `${7 - scrollPercent * -1}%`;
+        document.querySelector('#newLayer').style.bottom = `${7 - scrollPercent * -70}%`;
         document.querySelector('.cables').style.right = `-${70 - scrollPercent * 50}%`;
         document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -110}%`;   
     } else {  
     document.querySelector('.zerocorp').style.opacity = 0.15 + scrollPercent * 0.55;
-    document.querySelector('#immeubleA').style.left = `${30 - scrollPercent * 20}%`;
-    document.querySelector('#immeubleC').style.left = `${20 - scrollPercent * 15}%`;
+    document.querySelector('#immeubleA').style.left = `${18 - scrollPercent * 20}%`;
+    document.querySelector('#immeubleC').style.left = `${30 - scrollPercent * 15}%`;
     document.querySelector('#immeubleB').style.right = `${12 - scrollPercent * 11}%`;
     document.querySelector('#immeubleD').style.right = `${20 - scrollPercent * 15}%`;
     document.querySelector('#newLayer').style.bottom = `${-2 - scrollPercent * 5}%`;
@@ -179,10 +206,10 @@ function updateAnimation() {
     document.querySelector('.custom-element').style.bottom = `${8 - scrollPercent * -110}%`;
     }
     if (window.innerWidth <= 767) {
-    document.querySelector('#immeubleA').style.bottom = `${7 - scrollPercent * -40}%`;
-    document.querySelector('#immeubleC').style.bottom = `${7 - scrollPercent * -12}%`;
-    document.querySelector('#immeubleB').style.bottom = `${7 - scrollPercent * -40}%`;
-    document.querySelector('#immeubleD').style.bottom = `${7 - scrollPercent * -12}%`;
+    document.querySelector('#immeubleA').style.bottom = `${7 - scrollPercent * -105}%`;
+    document.querySelector('#immeubleC').style.bottom = `${7 - scrollPercent * -80}%`;
+    document.querySelector('#immeubleB').style.bottom = `${7 - scrollPercent * -105}%`;
+    document.querySelector('#immeubleD').style.bottom = `${7 - scrollPercent * -80}%`;
     } else { 
         document.querySelector('#immeubleA').style.bottom = `${5 - scrollPercent * -40}%`;
         document.querySelector('#immeubleC').style.bottom = `${5 - scrollPercent * -12}%`;
