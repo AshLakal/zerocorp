@@ -187,7 +187,7 @@ function animateElements() {
             document.querySelector('#immeubleA').style.bottom = `calc(8vh - ${scrollPercent * -105}vh)`;
             document.querySelector('#immeubleC').style.bottom = `calc(8vh - ${scrollPercent * -80}vh)`;
             document.querySelector('#immeubleB').style.bottom = `calc(8vh - ${scrollPercent * -105}vh)`;
-            document.querySelector('#immeubleD').style.bottom = `calc(8vh - ${scrollPercent * -80}vh)`;
+            document.querySelector('#immeubleD').style.bottom = `calc(vh - ${scrollPercent * -80}vh)`;
         } else { 
             document.querySelector('#immeubleA').style.bottom = `calc(5vh - ${scrollPercent * -40}vh)`;
             document.querySelector('#immeubleC').style.bottom = `calc(5vh - ${scrollPercent * -12}vh)`;
