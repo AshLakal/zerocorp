@@ -6,6 +6,12 @@ if ('scrollRestoration' in history) {
 
 let isStartingAnimation = true;
 
+window.addEventListener("load", function(){
+    var navbarHeight = window.innerHeight - document.body.offsetHeight;
+    document.querySelector(".container").style.marginTop = navbarHeight + "px";
+  });
+  
+
 // Function to reset scroll position and retrigger animation
 function resetScrollAndAnimation() {
     // Reset scroll position to the top
@@ -144,8 +150,6 @@ function animateElements() {
         }
     });
     
-
-
     function updateAnimation() {
         if (isStartingAnimation) {
             return;
