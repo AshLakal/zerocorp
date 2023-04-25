@@ -10,6 +10,7 @@
 }
 
 body {
+    overscroll-behavior-y: contain;
     overflow-x: hidden;
 }
 
@@ -118,7 +119,7 @@ html {
 
 .button-image-wrapper {
     position: absolute;
-    top: 80vh;
+    top: 150vh;
     left: 50vw;
     transform: translate(-50%, -50%);
     z-index: 1000;
