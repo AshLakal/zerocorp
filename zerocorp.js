@@ -184,10 +184,10 @@ function animateElements() {
             document.querySelector('.custom-element').style.bottom = `calc(8vh - ${scrollPercent * -110}vh)`;
         }
         if (window.innerWidth <= 767) {
-            document.querySelector('#immeubleA').style.bottom = `calc(7vh - ${scrollPercent * -105}vh)`;
-            document.querySelector('#immeubleC').style.bottom = `calc(7vh - ${scrollPercent * -80}vh)`;
-            document.querySelector('#immeubleB').style.bottom = `calc(7vh - ${scrollPercent * -105}vh)`;
-            document.querySelector('#immeubleD').style.bottom = `calc(7vh - ${scrollPercent * -80}vh)`;
+            document.querySelector('#immeubleA').style.bottom = `calc(8vh - ${scrollPercent * -105}vh)`;
+            document.querySelector('#immeubleC').style.bottom = `calc(8vh - ${scrollPercent * -80}vh)`;
+            document.querySelector('#immeubleB').style.bottom = `calc(8vh - ${scrollPercent * -105}vh)`;
+            document.querySelector('#immeubleD').style.bottom = `calc(8vh - ${scrollPercent * -80}vh)`;
         } else { 
             document.querySelector('#immeubleA').style.bottom = `calc(5vh - ${scrollPercent * -40}vh)`;
             document.querySelector('#immeubleC').style.bottom = `calc(5vh - ${scrollPercent * -12}vh)`;
