@@ -20,6 +20,8 @@ html {
 .container {
     position: relative;
     height: 200vh;
+    min-height: 100vh; /* This ensures the container takes up at least the full viewport height */
+    overflow: auto;
 }
 
 .bg {
