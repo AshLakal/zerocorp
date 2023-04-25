@@ -34,7 +34,7 @@ html {
 
 .moon {
     position: fixed;
-    width: 75vw; 
+    width: 75vw;
     height: 75vw;
     max-width: 75vh;
     max-height: 75vh;
@@ -48,18 +48,18 @@ html {
 
 #newLayer {
     z-index: 2;
-    left: 5%;
-    width: 70%;
-    max-height: 70%;
-    bottom:-2%;
+    left: 5vw;
+    width: 70vw;
+    max-height: 70vh;
+    bottom: -2vh;
 }
 
 .zerocorp {
     position: fixed;
-    width: 65vw; 
-    height: 65vw; 
-    max-width: 65vh; 
-    max-height: 65vh; 
+    width: 65vw;
+    height: 65vw;
+    max-width: 65vh;
+    max-height: 65vh;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -70,56 +70,56 @@ html {
 .cave {
     position: fixed;
     z-index: 4;
-    bottom: -110%; /* 90% from the top */
+    bottom: -110vh; /* 90% from the top */
     width: 100%;
     height: 120vh;
 }
-  
+
 .building {
     position: fixed;
-    bottom: 5%;
+    bottom: 5vh;
 }
 
 #immeubleC {
-    left: 30%;
+    left: 30vw;
     z-index: 2;
-    width: 35%;
-    max-height: 90%;
+    width: 35vw;
+    max-height: 90vh;
 }
 
 #immeubleD {
-    right: 20%;
-    width: 24%;
-    max-height: 90%;
+    right: 20vw;
+    width: 24vw;
+    max-height: 90vh;
     z-index: 2;
 }
 
 #immeubleA {
-    left: 18%;
-    width: 20%;
+    left: 18vw;
+    width: 20vw;
     z-index: 3;
 }
 
 #immeubleB {
-    right: 12%;
-    width: 40%;
-    max-height: 65%;
+    right: 12vw;
+    width: 40vw;
+    max-height: 65vh;
     z-index: 3;
 }
 
 .cables {
     position: fixed;
-    right: -50%;
+    right: -50vw;
     top: 0;
     z-index: 5;
-    width:50%;
+    width: 50vw;
     justify-content: center;
 }
 
 .button-image-wrapper {
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 80vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     z-index: 1000;
     display: flex;
@@ -151,7 +151,7 @@ html {
 }
 
 #youtube-button img {
-    bottom: 12%;
+    bottom: 12vh;
     width: 15vw; /* Adjust this value according to your desired button size */
 }
 
@@ -162,8 +162,8 @@ html {
 
 .contact-link {
     position: fixed;
-    bottom: 2%;
-    right: 2%;
+    bottom: 2vh;
+    right: 2vw;
     font-family: Verdana;
     font-size: 1rem;
     font-weight: bold;
@@ -181,15 +181,14 @@ html {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
 .floating-title {
     position: fixed;
-    right: 15%;
-    top:8%;
+    right: 15vw;
+    top: 8vh;
     font-size: 2rem;
     z-index: 3;
     opacity: 1;
-    font-family: Verdana; /* Choisissez votre police préférée */
+    font-family: Verdana; /* Choose your preferred font */
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
@@ -209,11 +208,11 @@ html {
 
 .custom-element {
     position: fixed;
-    width: 15%;
+    width: 15vw;
     z-index: 4;
-    bottom: 8%;
-    left: 50%;
-    transform-origin: right center; /* Ajoutez cette ligne pour déplacer le point de transformation */
+    bottom: 8vh;
+    left: 50vw;
+    transform-origin: right center; /* Add this line to move the transformation point */
     transform: translateX(-50%);
     will-change: transform, top;
 }
@@ -225,35 +224,34 @@ html {
     }
 
     #immeubleA, #immeubleC, #immeubleD {
-        width: 30%;
-        bottom: 8%;
+        width: 30vw;
+        bottom: 8vh;
     }
 
     #immeubleC {
-        width: 70%;
-        left: 7%;
+        width: 70vw;
+        left: 7vw;
     }
     #immeubleA {
-        width: 30%;
-        left:23%;
+        width: 30vw;
+        left: 23vw;
     }
 
     #immeubleD {
-        right:18%;
-    } 
+        right: 18vw;
+    }
 
     #immeubleB {
-        right: 10%;
-        bottom: 7%;
-        width: 38%;
+        right: 10vw;
+        bottom: 7vh;
+        width: 38vw;
         height: auto;
     }
 
     #newLayer {
-        bottom: 7%;
-        width: 70%;
-        right: 5%;
+        bottom: 7vh;
+        width: 70vw;
+        right: 5vw;
     }
 
 }
-
