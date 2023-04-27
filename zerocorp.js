@@ -204,7 +204,7 @@ const youtubeButton = document.getElementById("youtube-button");
 const youtubeButtonButton = youtubeButton.querySelector("button");
 
 youtubeButtonButton.addEventListener("click", () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    window.open('https://youtu.be/bVnWS4sENj0', '_blank');
 });
 
 window.addEventListener("scroll", () => {
