@@ -25,7 +25,7 @@ html {
 .bg {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 0;
     background-image: radial-gradient(circle, rgb(212, 206, 221) 0%, rgb(78, 65, 139) 30%, rgb(45, 32, 104) 50%, rgb(19, 3, 39) 100%);
     background-size: cover;
@@ -38,7 +38,7 @@ html {
     height: 75vw;
     max-width: 75vh;
     max-height: 75vh;
-    top: 50%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
@@ -46,22 +46,14 @@ html {
     border-radius: 50%; /* Make the div circular */
 }
 
-#newLayer {
-    z-index: 2;
-    left: 5vw;
-    width: 70vw;
-    max-height: 70vh;
-    bottom: -2vh;
-}
-
 .zerocorp {
     position: fixed;
-    width: 65vw;
-    height: 65vw;
-    max-width: 65vh;
-    max-height: 65vh;
+    width: 75vw;
+    height: 75vw;
+    max-width: 75vh;
+    max-height: 75vh;
     left: 50%;
-    top: 50%;
+    bottom: 0;
     transform: translate(-50%, -50%);
     opacity: 0.15;
     z-index: 1;
@@ -73,6 +65,14 @@ html {
     bottom: -110%; /* 90% from the top */
     width: 100%;
     height: 120vh;
+}
+
+#newLayer {
+    z-index: 2;
+    left: 5vw;
+    width: 70vw;
+    max-height: 70vh;
+    bottom: -2vh;
 }
 
 .building {
@@ -221,7 +221,7 @@ html {
 
     .cave {
         content: url('cave-mobile.png');
-        bottom: -110vh;
+        bottom: -110%; /* 90% from the top */
         width: 100%;
         height: 120vh;
     }
