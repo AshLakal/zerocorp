@@ -25,14 +25,14 @@ function resetScrollAndAnimation() {
 resetScrollAndAnimation();
 
 document.addEventListener('DOMContentLoaded', async () => {
-    window.scrollTo(0, 0);
- 
-    if (window.innerWidth <= 767) {
-        animateMobileElements();
-    } else {
-        animateElements();
-    }
-});
+        window.scrollTo(0, 0);
+     
+        if (window.innerWidth <= 767) {
+            animateMobileElements();
+        } else {
+            animateElements();
+        }
+    });
 
 function animateMobileElements() {
 
