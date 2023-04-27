@@ -17,11 +17,6 @@ html {
     overflow-y: scroll;
 }
 
-.web-container {
-    position: absolute;
-    height: 100vh;
-}
-
 .container {
     position: relative;
     height: 200vh;
