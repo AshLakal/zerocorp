@@ -34,11 +34,11 @@ html {
 
 .moon {
     position: fixed;
-    width: 75vw;
-    height: 75vw;
-    max-width: 75vh;
-    max-height: 75vh;
-    bottom: 50%;
+    width: calc(75vw + (56px * 75 / 100));
+    height: calc(75vw + (56px * 75 / 100));
+    max-width: calc(75vh + (56px * 75 / 100));
+    max-height: calc(75vh + (56px * 75 / 100));
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
