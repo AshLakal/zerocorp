@@ -24,6 +24,16 @@ function resetScrollAndAnimation() {
 // Reset scroll position and retrigger animation on page load
 resetScrollAndAnimation();
 
+document.addEventListener('DOMContentLoaded', async () => {
+    window.scrollTo(0, 0);
+ 
+    if (window.innerWidth <= 767) {
+        animateMobileElements();
+    } else {
+        animateElements();
+    }
+});
+
 function animateMobileElements() {
 
     const animations = [
@@ -133,16 +143,6 @@ function animateElements() {
             customElement.style.transform = 'translateX(-50%) rotate(90deg)';
         });
     }
-
-    document.addEventListener('DOMContentLoaded', async () => {
-        window.scrollTo(0, 0);
-     
-        if (window.innerWidth <= 767) {
-            animateMobileElements();
-        } else {
-            animateElements();
-        }
-    });
     
     function updateAnimation() {
         if (isStartingAnimation) {
