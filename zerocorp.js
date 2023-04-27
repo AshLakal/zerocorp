@@ -160,7 +160,7 @@ function animateElements() {
         // Animate the .cave element
         const cave = document.querySelector('.cave');
         const caveBottom = -110 + scrollPercent * 110; // Change the initial value and multiplier
-        cave.style.bottom = `calc(${caveBottom}%)`; 
+        cave.style.bottom = `calc(${caveBottom}vh)`; 
     
         if (window.innerWidth <= 767) {
             document.querySelector('.zerocorp').style.opacity = 0.15 + scrollPercent * 0.55;
