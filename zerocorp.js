@@ -246,8 +246,8 @@ function animateOrdi() {
 function updateCavePosition() {
     const cave = document.querySelector('.cave');
     const visibleHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    const caveBottomValue = visibleHeight * 1.1;
-    cave.style.bottom = `-${caveBottomValue}px`;
+    const bottomValue = visibleHeight * 1.2;
+    cave.style.bottom = `-${bottomValue}px`;
   }
   
   window.addEventListener('load', updateCavePosition);
