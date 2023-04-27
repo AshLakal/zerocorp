@@ -10,6 +10,7 @@
 }
 
 body {
+    overscroll-behavior-y: contain;
     overflow-x: hidden;
 }
 
@@ -70,7 +71,7 @@ html {
 .cave {
     position: fixed;
     z-index: 4;
-    bottom: -110%; /* 90% from the top */
+    bottom: -110vh; /* 90% from the top */
     width: 100%;
     height: 120vh;
 }
@@ -221,9 +222,6 @@ html {
 
     .cave {
         content: url('cave-mobile.png');
-        bottom: -110vh; /* 90% from the top */
-        width: 100%;
-        height: 120vh;
     }
 
     #immeubleA, #immeubleC, #immeubleD {
@@ -246,7 +244,7 @@ html {
 
     #immeubleB {
         right: 10vw;
-        bottom: 8vh;
+        bottom: 7vh;
         width: 38vw;
         height: auto;
     }
