@@ -1,4 +1,3 @@
-
 // Disable browser's default scroll restoration behavior
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -25,14 +24,14 @@ function resetScrollAndAnimation() {
 resetScrollAndAnimation();
 
 document.addEventListener('DOMContentLoaded', async () => {
-        window.scrollTo(0, 0);
-     
-        if (window.innerWidth <= 767) {
-            animateMobileElements();
-        } else {
-            animateElements();
-        }
-    });
+    window.scrollTo(0, 0);
+ 
+    if (window.innerWidth <= 767) {
+        animateMobileElements();
+    } else {
+        animateElements();
+    }
+});
 
 function animateMobileElements() {
 
@@ -242,13 +241,3 @@ function animateOrdi() {
         ordi.style.transform = "translateX(-50)";
     });
 }
-
-function updateCavePosition() {
-    const cave = document.querySelector('.cave');
-    const visibleHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    const bottomValue = visibleHeight * 1.1;
-    cave.style.bottom = `-${bottomValue}px`;
-  }
-  
-  window.addEventListener('load', updateCavePosition);
-  window.addEventListener('resize', updateCavePosition);
