@@ -1,3 +1,4 @@
+
 // Disable browser's default scroll restoration behavior
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -24,14 +25,14 @@ function resetScrollAndAnimation() {
 resetScrollAndAnimation();
 
 document.addEventListener('DOMContentLoaded', async () => {
-    window.scrollTo(0, 0);
- 
-    if (window.innerWidth <= 767) {
-        animateMobileElements();
-    } else {
-        animateElements();
-    }
-});
+        window.scrollTo(0, 0);
+     
+        if (window.innerWidth <= 767) {
+            animateMobileElements();
+        } else {
+            animateElements();
+        }
+    });
 
 function animateMobileElements() {
 
@@ -241,3 +242,4 @@ function animateOrdi() {
         ordi.style.transform = "translateX(-50)";
     });
 }
+
