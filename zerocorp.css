@@ -38,7 +38,7 @@ html {
     height: 75vw;
     max-width: 75vh;
     max-height: 75vh;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
@@ -221,7 +221,7 @@ html {
 
     .cave {
         content: url('cave-mobile.png');
-        bottom: -110vh;
+        bottom: -110vh; /* 90% from the top */
         width: 100%;
         height: 120vh;
     }
@@ -246,7 +246,7 @@ html {
 
     #immeubleB {
         right: 10vw;
-        bottom: 7vh;
+        bottom: 8vh;
         width: 38vw;
         height: auto;
     }
