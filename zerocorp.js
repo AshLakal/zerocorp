@@ -156,6 +156,7 @@ function animateElements() {
         const titleProgress = scrollPercent * 200;
         floatingTitle.style.transform = `translateX(${-titleProgress}%)`;
         floatingTitle.style.opacity = 1 - scrollPercent;
+
     
         // Animate the .cave element
         const cave = document.querySelector('.cave');
