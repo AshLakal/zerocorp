@@ -70,9 +70,9 @@ html {
 .cave {
     position: fixed;
     z-index: 4;
-    bottom: -110vh; /* 90% from the top */
+    bottom: -110%; /* 90% from the top */
     width: 100%;
-    height: 110vh;
+    height: 120vh;
 }
 
 .building {
@@ -221,6 +221,9 @@ html {
 
     .cave {
         content: url('cave-mobile.png');
+        bottom: -110vh;
+        width: 100%;
+        height: 120vh;
     }
 
     #immeubleA, #immeubleC, #immeubleD {
