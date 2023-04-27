@@ -221,7 +221,7 @@ html {
 
     .cave {
         content: url('cave-mobile.png');
-        bottom: -110%; /* 90% from the top */
+        bottom: -110vh;
         width: 100%;
         height: 120vh;
     }
